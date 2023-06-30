@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 242, 221);
+}
+
+table{
+    background-color: rgb(72, 72, 72);
+}
+span{
+    display: block;
+}
+
+.s-block, .p-block, .d-block, .la_ac{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.s-block{
+    background-color: rgb(204, 89, 1);
+}
+.p-block{
+    background-color: rgb(210, 210, 4);
+}
+.d-block{
+    background-color: rgb(92, 83, 190);
+}
+.la_ac{
+    background-color: green;
+}
