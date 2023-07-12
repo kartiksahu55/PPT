@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input box</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 60vh;
+      }
+      main {
+        background-color: rgb(10, 122, 122);
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      label {
+        font-size: 22px;
+      }
+      #input {
+        font-size: 16px;
+        padding: 5px;
+        width: 90%;
+      }
+      #submitBtn {
+        font-size: 24px;
+        padding: 3px 10px;
+        border-radius: 10px;
+        background-color: aqua;
+      }
+      p {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <label for="input">Type Something:</label>
+      <br />
+      <input id="input" type="text" />
+      <button id="submitBtn">Submit</button>
+      <p id="output"></p>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+      const input = document.getElementById("input")
+      const output = document.getElementById("output");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.addEventListener("click", ()=>{
+        console.log(input.value);
+
+        output.innerText=input.value
+      });
+    </script>
+  </body>
+</html>

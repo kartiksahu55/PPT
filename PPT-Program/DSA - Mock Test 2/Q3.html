@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      p {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <!-- JavaScript -->
+    <script>
+      const container = document.getElementById("container");
+
+      const loadeData = (data, fetched = true) => {
+        if (fetched) {
+          container.innerHTML = `<h2>Loading...</h2>`;
+        } else {
+          container.innerHTML = `
+            <p>User Id: ${data.userId}</p>
+            <p>User Id: ${data.title}</p>
+            `;
+        }
+      };
+      loadeData();
+
+      const fetchData = async () => {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/todos/1"
+        );
+        const data = await response.json();
+        console.log(data);
+
+        loadeData(data, false);
+      };
+      fetchData();
+
+      console.log(loader);
+    </script>
+  </body>
+</html>
