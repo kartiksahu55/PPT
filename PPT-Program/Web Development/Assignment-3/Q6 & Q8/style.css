@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NavBar */
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a9a9a9;
+  position: sticky;
+}
+
+nav > .hamburger {
+  display: none;
+}
+
+nav > img {
+  height: 50px;
+  padding: 10px;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  margin: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav > button {
+  font-size: 20px;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(70, 70, 234);
+  color: white;
+  cursor: pointer;
+}
+
+/* Main Section */
+main {
+  margin-top: 20px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 5%;
+}
+
+main .leftSec {
+  width: 45%;
+}
+
+main section :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2em;
+  width: 100%;
+}
+
+main section :nth-child(2) {
+  font-size: 20px;
+  color: rgb(70, 70, 234);
+  margin: 18px 0;
+}
+
+main section :nth-child(1) > span {
+  color: rgb(70, 70, 234);
+  width: 100%;
+}
+
+main section :nth-child(3) {
+  width: 80%;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+main section :nth-child(4) {
+  font-size: 18px;
+  color: rgb(87, 87, 87);
+}
+
+main > .img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+main .rightSec {
+  width: 45%;
+}
+
+/* Footer Section */
+footer{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+background-color: black;
+color: white;
+height: 200px;
+font-size: 20px;
+}
+
+footer :nth-child(1){
+  color: rgb(70, 70, 234);
+  margin-bottom: 20px;
+}
+
+
+
+
+/* Media Query for Mobile Device */
+@media (max-width: 568px) {
+  /* Navbar */
+  nav {
+    justify-content: space-between;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav > button {
+    display: none;
+  }
+  nav > .hamburger {
+    display: block;
+    position: relative;
+    right: 30px;
+  }
+
+  /* Main */
+  main {
+    flex-direction: column;
+    padding: 20px 2%;
+  }
+  main .leftSec {
+    width: 80%;
+  }
+  main .rightSec {
+    width: 80%;
+  }
+
+  /* Footer */
+  footer{
+    background-color: transparent;
+    color: black;
+  }
+}

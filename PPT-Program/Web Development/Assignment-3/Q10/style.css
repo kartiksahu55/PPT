@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(38, 38, 38);
+  color: #fff;
+  padding: 5%
+}
+
+.tableContainer{
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid white;
+}
+
+table tbody {
+  border: 1px solid white;
+}
+
+table thead{
+    background-color: rgb(45, 45, 45);
+}
+
+table tbody{
+    background-color: rgb(187, 187, 187);
+    color: black;
+}
+
+@media (max-width:600px){
+    .tableContainer{
+        overflow-x: scroll;
+    }
+}
